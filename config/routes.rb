@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   resources :posts
 
   root 'posts#index'
-  get 'posts/index' => 'posts#new'
-  get 'posts/show' => 'posts#show'
+
+  get 'new', to: 'posts#new'
+  
+
 
 end
