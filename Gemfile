@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+ruby '2.1.2'
 gem 'rails', '4.2.4'
 # Use puma for production web server
 gem 'puma',         '3.4.0'
