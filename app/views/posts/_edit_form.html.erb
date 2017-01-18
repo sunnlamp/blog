@@ -12,13 +12,13 @@
       <% end %>
       <%= f.label :title %>
       </br>
-      <%= f.text_field :title, class:"form-control post_box" %>
+      <%= f.text_field :title %>
       </br>
       <%= f.label :body %>
       </br>
-      <%= f.text_field :body, as: :text, class: "text_box", class:"form-control text_box", rows: 10 %>
+      <%= f.text_field :body, as: :text, class: "text_box", rows: 10 %>
       </br>
-      <%= f.submit "Create Post", class: "btn btn-primary" %>
+      <%= f.submit "Post Edits", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

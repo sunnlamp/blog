@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <h1>Sign up</h1>
+  <div class="row">
+    <div class="container">
+      <%= form_for @user do |f| %>
+        <% if @user.errors.any? %>
+          <div id="errors">
+            <h2><%= pluralize(@user.errors.count, "error") %> prevented
+            this post from saving.</h2>
+            <% @post.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </div>
+        <% end %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+
+        <%= f.label :email %>
+        <%= f.text_field :email, class: "form-control" %>
+
+        <%= f.label :password %>
+        <%= f.text_field :password, class: "form-control" %>
+
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.text_field :password_confirmation, class: "form-control" %>
+
+        <%= f.submit "Create account", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
