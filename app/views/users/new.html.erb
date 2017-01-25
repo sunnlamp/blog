@@ -1,9 +1,9 @@
 <h1>Sign up</h1>
-<div class="row">
-  <div class="container">
+<form class="col s12">
+  <div class="row">
     <%= form_for @user do |f| %>
       <% if @user.errors.any? %>
-        <div id="errors">
+        <div class="errors">
           <h2><%= pluralize(@user.errors.count, "error") %> prevented
           signup.</h2>
           <% @user.errors.full_messages.each do |msg| %>
@@ -13,18 +13,18 @@
       <% end %>
 
       <%= f.label :name %>
-      <%= f.text_field :name, class: "form-control" %>
+      <%= f.text_field :name, class: "validate" %>
 
       <%= f.label :email %>
-      <%= f.text_field :email, class: "form-control" %>
+      <%= f.text_field :email, class: "validate" %>
 
       <%= f.label :password %>
-      <%= f.text_field :password, class: "form-control" %>
+      <%= f.password_field :password, class: "validate" %>
 
       <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.text_field :password_confirmation, class: "form-control" %>
+      <%= f.password_field :password_confirmation, class: "validate" %>
 
-      <%= f.submit "Create account", class: "btn btn-primary" %>
+      <%= f.submit "Create account", class: "btn" %>
     <% end %>
   </div>
-</div>
+</form>

@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col s12">
     <%= form_for(:post, url: posts_path) do |f| %>
-    
+
       <% if @post.errors.any? %>
         <div id="errors">
           <h2><%= pluralize(@post.errors.count, "error") %> prevented
@@ -16,7 +16,7 @@
       <%= f.text_field :title %>
 
       <%= f.label :body %>
-      <%= f.text_field :body, as: :text, class: "materialize-textarea" %>
+      <%= f.text_field :body, as: :text, class: "materialize-textarea", id: "textarea1" %>
 
       <%= f.submit "Create Post", class: "btn" %>
     <% end %>
