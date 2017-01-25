@@ -12,6 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
 //= require turbolinks
+//= require materialize-sprockets
 //= require_tree .
+
+$(".dropdown-button").dropdown();
+$('#textarea1').val('New Text');
+$('#textarea1').trigger('autoresize');

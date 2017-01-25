@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pages/about'
+
   get 'sessions/new'
 
   resources :posts
@@ -18,4 +20,6 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
+  # Pages
+  get '/about', to: 'pages#about'
 end
