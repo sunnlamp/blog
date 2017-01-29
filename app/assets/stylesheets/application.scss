@@ -15,7 +15,10 @@
 @import "materialize";
 
 body {
-
+  .pagination a li.active {
+    color: #fff;
+  }
+  
   h1 {
     padding-left: 5px;
 
