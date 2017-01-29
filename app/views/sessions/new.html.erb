@@ -1,7 +1,7 @@
 <h1>Log In</h1>
-<form class="col s12">
+
   <div class="row">
-    <%= form_for(:session, url: login_path) do |f| %>
+    <%= form_for(:session, url: login_path(:session)) do |f| %>
 
       <%= f.label :email %>
       <%= f.text_field :email, class: "validate" %>
@@ -16,4 +16,3 @@
       Want to comment? <%= link_to "Make an account!", signup_path %>
     </p>
   </div>
-</form>

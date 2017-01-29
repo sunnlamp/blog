@@ -1,30 +1,20 @@
 <h1>Sign up</h1>
-<form class="col s12">
   <div class="row">
-    <%= form_for @user do |f| %>
-      <% if @user.errors.any? %>
-        <div class="errors">
-          <h2><%= pluralize(@user.errors.count, "error") %> prevented
-          signup.</h2>
-          <% @user.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </div>
-      <% end %>
+    <%= form_for(@user) do |f| %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, class: "validate" %>
-
-      <%= f.label :email %>
-      <%= f.text_field :email, class: "validate" %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: "validate" %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: "validate" %>
+      <div class="input-field">
+        <%= f.text_field :name, autofocus: true, class: "validate", placeholder: "Name" %>
+      </div>
+      <div class="input-field">
+        <%= f.email_field :email, autofocus: true, class: "validate", placeholder: "Email" %>
+      </div>
+      <div class="input-field">
+        <%= f.password_field :password, :id => "password", placeholder: "Password", class: "validate" %>
+      </div>
+      <div class="input-field">
+        <%= f.password_field :password_confirmation, :id => "password_confirmation", placeholder: "Password Confirmation", class: "validate" %>
+      </div>
 
       <%= f.submit "Create account", class: "btn" %>
     <% end %>
   </div>
-</form>
